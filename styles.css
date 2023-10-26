@@ -196,7 +196,7 @@ ul li {
 }
 
 /*mobile view*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     body {
         height: auto;
     }
@@ -209,12 +209,12 @@ ul li {
     }
 
     .info-contact {
-        width: 85%;
+        width: 90%;
         padding-bottom: 10px;
     }
 
     .introduction .description {
-        width: 85%;
+        width: 90%;
     }
 
     .edu-skill {
@@ -224,13 +224,13 @@ ul li {
         flex-direction: column;
     }
     .edu-skill .edu, .skill{
-        width: 85%;
+        width: 90%;
     }
     .edu-skill .project{
         margin-left: 20px;
-        width: 85%;
+        width: 90%;
     }
     .contact-link{
-        width: 85%;
+        width: 90%;
     }
 }
