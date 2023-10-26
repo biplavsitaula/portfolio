@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     height: auto;
 }
+
 /*end of screen warning*/
 .warning {
     font-size: 25px;
@@ -190,7 +191,7 @@ ul li {
     text-decoration: none;
     color: rgb(2, 166, 255);
     line-height: 22px;
-    
+
 }
 
 .contact-link a:hover {
@@ -225,14 +226,18 @@ ul li {
         display: flex;
         flex-direction: column;
     }
-    .edu-skill .edu, .skill{
+
+    .edu-skill .edu,
+    .skill {
         width: 85%;
     }
-    .edu-skill .project{
+
+    .edu-skill .project {
         margin-left: 20px;
         width: 85%;
     }
-    .contact-link{
+
+    .contact-link {
         width: 85%;
     }
 }
