@@ -49,7 +49,6 @@ body {
     word-spacing: 0.2cm;
     line-height: 20px;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
 }
 
 .description:hover,
@@ -76,7 +75,6 @@ body {
     padding: 10px 10px 0px 10px;
     align-items: center;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
 }
 
 .info h1 {
@@ -128,7 +126,6 @@ body {
     margin-top: 20px;
     padding: 10px 10px 0px 10px;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
 }
 
 .edu p {
@@ -144,7 +141,6 @@ body {
     padding: 10px 10px 10px 10px;
     word-spacing: 0.2cm;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
 }
 
 ul li {
@@ -161,7 +157,6 @@ ul li {
     padding: 10px 10px 10px 10px;
     word-spacing: 0.2cm;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
 }
 
 .project p {
@@ -179,7 +174,6 @@ ul li {
     margin-top: 20px;
     padding: 10px 10px 0px 10px;
     box-shadow: 0px 0px 1px 1px white;
-    filter: blur(10px);
     margin-bottom: 20px;
 }
 
