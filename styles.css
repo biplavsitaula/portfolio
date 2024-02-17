@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('images/background.jpg');
+    background-color: #008080;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     background-repeat: repeat-y;
