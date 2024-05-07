@@ -8,7 +8,7 @@
     --red: #d62828;
     --orange: #f77f00;
     --yellow: #fcbf49;
-    --white: #eae2b7;
+    --white: #fffadd;
 }
 
 ::-webkit-scrollbar {
@@ -60,24 +60,29 @@ nav {
     width: 40%;
     text-align: center;
 }
-.buttons{
+
+.buttons {
     display: flex;
     color: var(--white);
 }
 
-.buttons .scroll-to-projects, .buttons .scroll-to-experience{
+.buttons .scroll-to-projects,
+.buttons .scroll-to-experience {
     all: unset;
     border-radius: 5px 0 0 5px;
     border: 1px solid var(--white);
     padding: 5px;
     transition: all 0.3s ease-in-out;
 }
-.buttons .scroll-to-projects:hover, .buttons .scroll-to-experience:hover {
-  background-color: var(--white);
-  color: var(--red);
-  cursor: pointer;
+
+.buttons .scroll-to-projects:hover,
+.buttons .scroll-to-experience:hover {
+    background-color: var(--white);
+    color: var(--red);
+    cursor: pointer;
 }
-.buttons .scroll-to-experience{
+
+.buttons .scroll-to-experience {
     border-radius: 0 5px 5px 0;
     margin-left: -1px;
 }
@@ -242,11 +247,14 @@ nav {
 .projects-header {
     text-decoration: underline;
 }
-.project-card-container{
+
+.project-card-container {
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
-.project-card-container:nth-child(even){
+
+.project-card-container:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -254,9 +262,32 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    position: relative;
 }
-.project-card img{
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--red);
+    left: 50%;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--red);
+    right: 49.4%;
+    border: 1px solid var(--red);
+}
+
+.project-card img {
     mix-blend-mode: multiply;
+    z-index: 1;
 }
 
 .social-app:hover,
@@ -264,7 +295,7 @@ nav {
 .portfolio-site:hover {
     border: 1px solid var(--white);
     cursor: pointer;
-    box-shadow: 3px 3px 3px var(--blue);
+    box-shadow: 0px 0px 3px var(--blue);
 }
 
 .social-app,
@@ -281,6 +312,7 @@ nav {
     gap: 8px;
     height: fit-content;
     transition: all 0.3s ease-in-out;
+
 }
 
 .project-name {
@@ -326,4 +358,3 @@ nav {
 .workplace>img {
     mix-blend-mode: multiply;
 }
-
