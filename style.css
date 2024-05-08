@@ -265,26 +265,6 @@ nav {
     position: relative;
 }
 
-.project-card::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: var(--red);
-    left: 50%;
-}
-
-.project-card::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--red);
-    right: 49.4%;
-    border: 1px solid var(--red);
-}
-
 .project-card img {
     mix-blend-mode: multiply;
     z-index: 1;
@@ -296,6 +276,9 @@ nav {
     border: 1px solid var(--white);
     cursor: pointer;
     box-shadow: 0px 0px 3px var(--blue);
+}
+.hover-filter{
+    filter: invert(100%);
 }
 
 .social-app,
@@ -312,7 +295,7 @@ nav {
     gap: 8px;
     height: fit-content;
     transition: all 0.3s ease-in-out;
-
+    position: relative;
 }
 
 .project-name {
