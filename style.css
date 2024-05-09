@@ -8,7 +8,7 @@
     --red: #d62828;
     --orange: #f77f00;
     --yellow: #fcbf49;
-    --white: #fffadd;
+    --white: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -67,7 +67,8 @@ nav {
 }
 
 .buttons .scroll-to-projects,
-.buttons .scroll-to-experience {
+.buttons .scroll-to-experience,
+.buttons .scroll-to-about {
     all: unset;
     border-radius: 5px 0 0 5px;
     border: 1px solid var(--white);
@@ -76,10 +77,16 @@ nav {
 }
 
 .buttons .scroll-to-projects:hover,
+.buttons .scroll-to-about:hover,
 .buttons .scroll-to-experience:hover {
     background-color: var(--white);
     color: var(--red);
     cursor: pointer;
+}
+
+.buttons .scroll-to-projects {
+    border-radius: 0;
+    margin-left: 0px;
 }
 
 .buttons .scroll-to-experience {
@@ -149,16 +156,14 @@ nav {
     display: flex;
     gap: 32px;
     line-height: 12px;
-    background-color: var(--yellow);
     padding: 10px 10px;
     border-radius: 5px;
-    border: 1px solid var(--red);
     transition: all 0.3s ease;
 }
 
 .skills:hover {
-    box-shadow: 1px 1px 10px var(--blue);
-    border: 1px solid var(--white);
+    filter: drop-shadow(1px 10px 10px var(--red));
+    gap: 40px;
     cursor: pointer;
 }
 
@@ -235,7 +240,8 @@ nav {
     object-fit: cover;
 }
 
-.projects-container {
+.projects-container,
+.about-container {
     padding: 50px 0 50px 0;
     margin: 0 10% 0 10%;
     display: flex;
@@ -265,37 +271,41 @@ nav {
     position: relative;
 }
 
+.project-card::before {
+    content: "";
+    width: 50%;
+    height: 80%;
+    border: 2px solid var(--red);
+    position: absolute;
+    border-radius: 10px;
+    top: 10%;
+    left: 25%;
+}
+
 .project-card img {
-    mix-blend-mode: multiply;
+    /* mix-blend-mode: difference; */
     z-index: 1;
 }
 
 .social-app:hover,
 .wordpress-app:hover,
 .portfolio-site:hover {
-    border: 1px solid var(--white);
+    text-shadow: 0 5px 10px var(--red);
     cursor: pointer;
-    box-shadow: 0px 0px 3px var(--blue);
-}
-.hover-filter{
-    filter: invert(100%);
 }
 
 .social-app,
 .wordpress-app,
 .portfolio-site {
-    background-color: var(--yellow);
+    background-color: var(--white);
     padding: 16px 32px;
-    border-radius: 5px;
-    border: 1px solid var(--red);
     width: 25%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 8px;
     height: fit-content;
-    transition: all 0.3s ease-in-out;
-    position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
 .project-name {
@@ -308,19 +318,14 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-.project-name:hover {
-    background-color: var(--white);
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 .experience-container {
     margin: 0 10% 0 10%;
     padding: 50px 0 50px 0;
     border-top: 1px solid var(--blue);
 }
 
-.experience-header {
+.experience-header,
+.about-header {
     text-decoration: underline;
     margin-bottom: 24px;
 }
@@ -340,4 +345,37 @@ nav {
 
 .workplace>img {
     mix-blend-mode: multiply;
+}
+
+/*about section*/
+.about-body-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 14%;
+    width: 35%;
+    line-height: 24px;
+}
+
+.about-content-one,
+.about-content-two {
+    width: 80%;
+}
+
+.about-content-one:hover,
+.about-content-two:hover {
+    text-shadow: 0px 5px 10px var(--red);
+    font-size: 1.1em;
+    display: inline-block;
+    line-height: 28px;
+    letter-spacing: 1px;
+    cursor: grab;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
 }

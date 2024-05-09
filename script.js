@@ -112,3 +112,4 @@ homeButton.addEventListener("click", function (event) {
     behavior: "smooth"
   });
 });
+
