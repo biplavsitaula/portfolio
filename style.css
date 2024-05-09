@@ -28,7 +28,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
+    background: var(--white);
 }
 
 body {
