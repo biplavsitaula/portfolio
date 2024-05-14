@@ -152,6 +152,13 @@ nav {
     gap: 16px;
 }
 
+
+.name {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--blue);
+    color: var(--white);
+}
+
 .skills {
     display: flex;
     gap: 32px;
@@ -162,9 +169,7 @@ nav {
 }
 
 .skills:hover {
-    filter: drop-shadow(1px 10px 10px var(--red));
     gap: 40px;
-    cursor: pointer;
 }
 
 .skills .react {
@@ -210,12 +215,9 @@ nav {
 }
 
 .hero-image {
-    width: 300px;
-    height: 300px;
+    width: 500px;
     overflow: hidden;
-    border-radius: 50%;
-    filter: drop-shadow(1px 1px 1px);
-    animation: heroAnimation 5s ease-in-out infinite alternate;
+    transform: scaleX(-1);
 }
 
 @keyframes heroAnimation {
@@ -271,27 +273,11 @@ nav {
     position: relative;
 }
 
-.project-card::before {
-    content: "";
-    width: 50%;
-    height: 80%;
-    border: 2px solid var(--red);
-    position: absolute;
-    border-radius: 10px;
-    top: 10%;
-    left: 25%;
-}
+
 
 .project-card img {
     /* mix-blend-mode: difference; */
     z-index: 1;
-}
-
-.social-app:hover,
-.wordpress-app:hover,
-.portfolio-site:hover {
-    text-shadow: 0 5px 10px var(--red);
-    cursor: pointer;
 }
 
 .social-app,
@@ -339,7 +325,7 @@ nav {
 .experience-content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     line-height: 24px;
 }
 
@@ -366,16 +352,4 @@ nav {
 .about-content-one,
 .about-content-two {
     width: 80%;
-}
-
-.about-content-one:hover,
-.about-content-two:hover {
-    text-shadow: 0px 5px 10px var(--red);
-    font-size: 1.1em;
-    display: inline-block;
-    line-height: 28px;
-    letter-spacing: 1px;
-    cursor: grab;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
 }

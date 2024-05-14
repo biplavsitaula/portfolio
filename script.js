@@ -112,4 +112,17 @@ homeButton.addEventListener("click", function (event) {
     behavior: "smooth"
   });
 });
+const scrollToAboutButton = document.querySelector(".scroll-to-about");
+
+scrollToAboutButton.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  var aboutSection = document.querySelector(".about-container");
+  var offsetTop = aboutSection.offsetTop;
+
+  window.scrollTo({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+});
 
