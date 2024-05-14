@@ -276,7 +276,7 @@ nav {
 
 
 .project-card img {
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: multiply;
     z-index: 1;
 }
 
