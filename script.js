@@ -1,22 +1,21 @@
-const theme = localStorage.getItem('theme')
-document.body.classList.toggle(theme)
-const toggleBtn = document.getElementById('theme-toggle');
+const theme = localStorage.getItem("theme");
+document.body.classList.toggle(theme);
+const toggleBtn = document.getElementById("theme-toggle");
+
+theme == "dark"
+  ? (toggleBtn.style.backgroundImage = "url('./sun-solid.svg')")
+  : (toggleBtn.style.backgroundImage = "url('./moon-solid.svg')");
 
 
-// Add rotation angle tracking
-let rotated = false;
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
 
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  document.body.classList.toggle('light');
-  
   // Save preference
-  const newTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
-  localStorage.setItem('theme', newTheme);
-  
-  // Rotate the button
-  rotated = !rotated;
-  toggleBtn.style.transform = rotated ? 'rotate(180deg)' : 'rotate(0deg)';
-  toggleBtn.style.backgroundImage = rotated?"url('./sun-solid.svg')" : "url('./moon-solid.svg')"
-  toggleBtn.style.transition = 'transform 0.3s ease';
+  const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", newTheme);
+
+  toggleBtn.style.transform = newTheme=='dark' ? "rotate(180deg)" : "rotate(0deg)";
+  toggleBtn.style.backgroundImage =
+    newTheme == "dark" ? "url('./sun-solid.svg')" : "url('./moon-solid.svg')";
 });
