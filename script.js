@@ -1,4 +1,7 @@
+const theme = localStorage.getItem('theme')
+document.body.classList.toggle(theme)
 const toggleBtn = document.getElementById('theme-toggle');
+
 
 // Add rotation angle tracking
 let rotated = false;

@@ -127,6 +127,11 @@ body.dark {
   border-radius: 8px;
 }
 
+.experience-card:hover{
+  background-color: var(--border-color);
+  transform: translateY(-5px);
+}
+
 .experience-card h3 {
   font-size: 1.25rem;
   margin-bottom: 5px;
@@ -136,7 +141,7 @@ body.dark {
 .company {
   display: block;
   font-weight: bold;
-  color: var(--accent);
+  color: var(--text-secondary);
 }
 
 .period {
@@ -162,4 +167,52 @@ body.dark {
   padding: 8px 12px;
   border-radius: 6px;
   display: inline-block;
+}
+/* project section */
+
+.projects-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.project-card {
+  background-color: var(--card-background);
+  border-left: 5px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--border-color);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.stack {
+  background-color: var(--background);
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
 }
