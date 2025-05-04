@@ -1,79 +1,19 @@
-const jsIcon = document.querySelector('.js');
-const cssIcon = document.querySelector('.css');
+const toggleBtn = document.getElementById('theme-toggle');
 
+// Add rotation angle tracking
+let rotated = false;
 
-window.addEventListener('mousemove', (e) => {
-  const iconRect = jsIcon.getBoundingClientRect();
-  const iconCenterX = iconRect.left + iconRect.width / 2;
-  const iconCenterY = iconRect.top + iconRect.height / 2;
-
-  const jsX = -(e.clientY - iconCenterY) / 10; // Adjust for sensitivity
-  const jsY = (e.clientX - iconCenterX) / 10;
-
-  jsIcon.style.transform = `rotateX(${jsX}deg) rotateY(${jsY}deg)`;
-
-  const cssX = -(e.clientX - iconCenterY) / 10; // Adjust for sensitivity
-  const cssY = (e.clientY - iconCenterX) / 10;
-
-  cssIcon.style.transform = `rotateX(${cssY}deg) rotateY(${cssX}deg)`;
-
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  document.body.classList.toggle('light');
+  
+  // Save preference
+  const newTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+  localStorage.setItem('theme', newTheme);
+  
+  // Rotate the button
+  rotated = !rotated;
+  toggleBtn.style.transform = rotated ? 'rotate(180deg)' : 'rotate(0deg)';
+  toggleBtn.style.backgroundImage = rotated?"url('./sun-solid.svg')" : "url('./moon-solid.svg')"
+  toggleBtn.style.transition = 'transform 0.3s ease';
 });
-
-
-const scrollToExperienceButton = document.querySelector(".scroll-to-experience");
-
-scrollToExperienceButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-
-  var experienceSection = document.querySelector(".experience-container");
-  var offsetTop = experienceSection.offsetTop;
-
-  window.scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-});
-
-
-const scrollToProjectsButton = document.querySelector(".scroll-to-projects");
-
-scrollToProjectsButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-
-  var projectsSection = document.querySelector(".projects-container");
-  var offsetTop = projectsSection.offsetTop;
-
-  window.scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-});
-const homeButton = document.querySelector(".logo");
-
-homeButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  var projectsSection = document.querySelector(".hero-section");
-  var offsetTop = projectsSection.offsetTop;
-
-  window.scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-});
-const scrollToAboutButton = document.querySelector(".scroll-to-about");
-
-scrollToAboutButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  var aboutSection = document.querySelector(".about-container");
-  var offsetTop = aboutSection.offsetTop;
-
-  window.scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-});
-
