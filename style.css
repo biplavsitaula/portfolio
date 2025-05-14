@@ -13,6 +13,7 @@
   --accent: #2563eb;
   --card-background: #f3f4f6;
   --border-color: #e5e7eb;
+  line-height: 1.5rem;
 }
 
 /* Light Theme */
@@ -59,21 +60,50 @@ body.dark {
 
 .hero {
   color: var(--text-primary);
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
   justify-content: center;
+  align-items: center;
   text-align: center;
   height: 90vh;
   height: 90dvh;
   width: 100%;
   position: relative;
 }
-.detail *{
+.detail> *{
   margin-block: 1rem;
 }
 .hero .name{
   font-size: 2em;
   font-weight: 100;
+}
+.intro{
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.socials svg{
+  width: 30px;
+  height: 30px;
+  background-color: var(--card-background);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+.hero .socials a{
+  border: none;
+  text-decoration: none;
+}
+.socials{
+  margin-bottom: 1rem;
+}
+
+.socials ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  fill: var(--text-secondary);
+  color: var(--text-secondary);
 }
 .hero a{
   color: var(--accent);
@@ -152,8 +182,8 @@ body.dark {
 }
 
 .experience-card ul {
-  list-style: disc inside;
-  margin: 10px 0 15px;
+  list-style: '👉🏻';
+  margin: 10px 18px 15px;
   color: var(--text-secondary);
 }
 .experience-card ul li{
