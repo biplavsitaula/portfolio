@@ -1,0 +1,25 @@
+{
+  "name": "protfolio",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "build": "babel react.js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biplavsitaula/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biplavsitaula/portfolio/issues"
+  },
+  "homepage": "https://github.com/biplavsitaula/portfolio#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2"
+  }
+}

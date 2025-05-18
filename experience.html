@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience | Biplav Sitaula</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image" href="/BS.png" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        body{
-            text-align: center;
-            border-radius: 1rem;
-            padding-block:1.5rem;
-            animation: glow 600ms infinite alternate ease-in-out;
-        }
-        @keyframes glow {
-            from{
-                box-shadow: 1px 1px 5px red;
-                transform: scale(0.4);
-            }
-            to{
-                box-shadow: 1px 1px 30px red;
-                transform: scale(0.5);
-            }            
-        }
-        h1{
-            color: var(--text-primary);
-            margin-block: 1rem;
-        }
-        h2{
-            color: var(--text-secondary);
-        }
-        img{
-            padding: 1rem;
-            width: 50%;
-        }
+      main {
+        text-align: center;
+        border-radius: 1rem;
+        padding-block: 1.5rem;
+        transform: scale(0.5);
+      }
+      h1 {
+        color: var(--text-primary);
+        margin-block: 1rem;
+      }
+      h2 {
+        color: var(--text-secondary);
+      }
+      img {
+        padding: 1rem;
+        width: 50%;
+      }
     </style>
-</head>
+  </head>
+  <body>
+    <button id="theme-toggle"></button>
+<header id="header"></header>
+    <main>
     <h1>404: Not Found!</h1>
     <h2><strong>Opp!</strong> Building this page at the moment.</h2>
-    <img src="/working.gif"/>
+    <img src="/working.gif" />
+    </main>
+    <footer id="footer"></footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
-</body>
+    <script src="/lib/react.js"></script>
+  </body>
 </html>

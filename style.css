@@ -38,6 +38,7 @@ body.dark {
   background-color: var(--background);
 }
 
+
 #theme-toggle {
   padding: 1rem;
   background-image: url("./moon-solid.svg");
@@ -290,4 +291,12 @@ nav > ul {
   border-radius: 4px;
   font-size: 0.85rem;
   color: var(--text-secondary);
+}
+
+
+/* footer section */
+footer{
+  position: static;
+  width: 100%;
+  bottom: 0;
 }

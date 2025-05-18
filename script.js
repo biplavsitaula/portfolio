@@ -1,4 +1,4 @@
-AOS.init();
+AOS.init({once: true});
 
 const theme = localStorage.getItem("theme");
 document.body.classList.toggle(theme);
@@ -11,8 +11,13 @@ if (url.pathname == "/") {
     strings: ["Developer", "Engineer"],
     autoStart: true,
     loop: true,
-  });
+  }); 
 }
+if(url.pathname !=='/'){
+  const footer = document.getElementById('footer')
+  footer.style.position ='fixed'
+}
+
 
 theme == "dark"
   ? (toggleBtn.style.backgroundImage = "url('./sun-solid.svg')")
