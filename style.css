@@ -48,13 +48,14 @@ body.dark {
   border: 1px solid var(--border-color);
   cursor: pointer;
   border-radius: 50%;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3 ease;
+  transition: 0.3s ease;
   position: fixed;
   top: 90%;
   margin-left: 90%;
+  z-index: 10;
   @media (width<426px) {
-    top: 10px;
-    
+    top: 85%;
+    margin-left: 88%;
   }
 }
 
@@ -299,4 +300,7 @@ footer{
   position: static;
   width: 100%;
   bottom: 0;
+  @media (width<426px) {
+    margin-bottom: 10vh;
+  }
 }

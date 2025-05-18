@@ -24,6 +24,7 @@ theme == "dark"
   : (toggleBtn.style.backgroundImage = "url('./moon-solid.svg')");
 
 toggleBtn.addEventListener("click", () => {
+  
 
   document.body.classList.toggle("dark");
   document.body.classList.toggle("light");
