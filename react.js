@@ -6,7 +6,7 @@ const Footer = () => {
         2
       )} seconds.`,
       duration: 3000,
-      destination: "https://github.com/apvarun/toastify-js",
+      destination: "https://github.com/biplavsitaula",
       gravity: "top", // `top` or `bottom`
       position: "right",
       stopOnFocus: true,
