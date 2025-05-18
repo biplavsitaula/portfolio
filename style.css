@@ -3,7 +3,7 @@
   padding: 0;
   font-family: "Ubuntu";
   scroll-behavior: smooth;
-  transition: 0.3s ease-in-out
+  transition: 0.3s ease-in-out;
 }
 /* Base Variables (optional defaults) */
 :root {
@@ -40,7 +40,7 @@ body.dark {
 
 #theme-toggle {
   padding: 1rem;
-  background-image: url('./moon-solid.svg');
+  background-image: url("./moon-solid.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.5rem;
@@ -48,13 +48,57 @@ body.dark {
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s ease, color 0.3s ease, transform 0.3 ease;
-  position: sticky;
-  top: 2rem;
-  margin-left: 2rem; 
-  z-index: 10;
+  position: fixed;
+  top: 90%;
+  margin-left: 90%;
+  @media (width<426px) {
+    top: 10px;
+    
+  }
 }
 
+/* navigation */
+nav{
+  position: fixed;
+  top: 10px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin-inline:28%;
+  @media (width<1080px) {
+    margin-inline: 1rem;
+  }
+  @media (width<426px) {
+    margin-inline: 10px;
+    top: 90vh;
+    top: 90dvh;
+    bottom: 0;
+  }
 
+}
+nav > ul {
+  list-style: none;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  backdrop-filter: blur(5px);
+  border-radius: 1.2rem;
+  font-weight: 700;
+  border: 1px solid var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (width<426px) {
+    padding-inline: 0;
+    gap: 1rem;
+  }
+  a {
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+  }
+}
 
 /*----main----*/
 
@@ -70,64 +114,65 @@ body.dark {
   width: 100%;
   position: relative;
 }
-.detail> *{
+.detail > * {
   margin-block: 1rem;
 }
-.hero .name{
+.hero .name {
   font-size: 2em;
   font-weight: 100;
 }
-.intro{
+.intro {
   max-width: 600px;
   margin-bottom: 20px;
   color: var(--text-secondary);
 }
 
-.socials svg{
+.socials svg {
   width: 30px;
   height: 30px;
   background-color: var(--card-background);
   padding: 0.3rem;
   border-radius: 0.3rem;
 }
-.hero .socials a{
+.hero .socials a {
   border: none;
   text-decoration: none;
 }
-.socials{
+.socials {
   margin-bottom: 1rem;
 }
 
-.socials ul{
+.socials ul {
   list-style: none;
   display: flex;
+  gap: 2rem;
   justify-content: center;
   fill: var(--text-secondary);
   color: var(--text-secondary);
 }
-.hero a{
+.detail > a {
   color: var(--accent);
   text-decoration: none;
   border: 1px solid var(--border-color);
   padding: 0.5rem 1.2rem;
   border-radius: 1rem;
+  background-color: none;
   transition: 0.3s ease-in-out;
 }
-.hero a:hover{
+.detail > a:hover {
   background-color: var(--card-background);
 }
-.skills{
+.skills {
   color: var(--text-primary);
-
 }
-.skill_list{
+.skill_list {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
 }
-.skill_list *{
+.skill_list * {
   border: 1px solid var(--border-color);
   padding: 0.2rem 0.6rem;
   background-color: var(--card-background);
@@ -139,7 +184,7 @@ body.dark {
 .experience-section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px;
 }
 
 .experience-section h2 {
@@ -157,7 +202,7 @@ body.dark {
   border-radius: 8px;
 }
 
-.experience-card:hover{
+.experience-card:hover {
   background-color: var(--border-color);
   transform: translateY(-5px);
 }
@@ -182,11 +227,11 @@ body.dark {
 }
 
 .experience-card ul {
-  list-style: '👉🏻';
+  list-style: "👉🏻";
   margin: 10px 18px 15px;
   color: var(--text-secondary);
 }
-.experience-card ul li{
+.experience-card ul li {
   margin-block: 0.3rem;
 }
 
@@ -203,7 +248,7 @@ body.dark {
 .projects-section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 .projects-section h2 {
