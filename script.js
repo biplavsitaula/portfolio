@@ -6,7 +6,7 @@ const toggleBtn = document.getElementById("theme-toggle");
 
 const url = window.location;
 
-if (url.pathname == "/") {
+if (url.pathname == "/" || url.pathname =='/index.html') {
   new Typewriter("#typewriter", {
     strings: ["Developer", "Engineer"],
     autoStart: true,

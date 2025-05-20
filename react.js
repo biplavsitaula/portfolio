@@ -83,9 +83,15 @@ const Nav = () =>
         "li",
         null,
         React.createElement("a", { href: "project.html" }, "Projects")
+      ),
+      React.createElement(
+        "li",
+        null,
+        React.createElement("a", { href: "/v0/index.html" }, "Version v0")
       )
     )
   );
+ 
 const headContainer = document.getElementById("header");
 const header = ReactDOM.createRoot(headContainer);
 header.render(React.createElement(Nav));
