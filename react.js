@@ -1,5 +1,5 @@
 const Footer = () => {
-  const start = Date.now();
+  const start = sessionStorage.getItem("startTime");
   const handleClick = () => {
     Toastify({
       text: `You are here since ${((Date.now() - start) / 1000).toFixed(
@@ -18,36 +18,16 @@ const Footer = () => {
     }).showToast();
   };
   return React.createElement(
-    "p",
+    "div",
     {
-      style: {
-        width: "100%",
-        color: "var(--text-secondary)",
-        borderTop: "1px solid var(--text-secondary)",
-        textAlign: "center",
-        fontSize: "1.2rem",
-        paddingBlock: "1rem",
-        background: "var(--card-background)",
-        display: "flex",
-        justifyContent: "center",
-        gap: "8px",
-      },
       "data-aos": "fade-up",
       "data-aos-delay": "50",
     },
-    "© Biplav Sitaula",
+    React.createElement("span", null, "© Biplav Sitaula"),
     React.createElement(
       "button",
       {
         onClick: handleClick,
-        style: {
-          color: "var(--text-secondary)",
-          border: "1px solid var(--text-secondary)",
-          background: "var(--background)",
-          padding: "4px 8px",
-          borderRadius: "2px",
-          cursor: "pointer",
-        },
       },
       "Up time"
     )
@@ -57,10 +37,10 @@ const container = document.getElementById("footer");
 const footer = ReactDOM.createRoot(container);
 footer.render(React.createElement(Footer));
 
-const Nav = () =>
-  React.createElement(
+const Nav = () => {
+  return React.createElement(
     "nav",
-    null,
+    { className: "navigation-menu", id: "navbar" },
     React.createElement(
       "ul",
       null,
@@ -72,17 +52,7 @@ const Nav = () =>
       React.createElement(
         "li",
         null,
-        React.createElement("a", { href: "about.html" }, "About")
-      ),
-      React.createElement(
-        "li",
-        null,
-        React.createElement("a", { href: "experience.html" }, "Experience")
-      ),
-      React.createElement(
-        "li",
-        null,
-        React.createElement("a", { href: "project.html" }, "Projects")
+        React.createElement("a", { href: "myplaylist.html" }, "My Playlist")
       ),
       React.createElement(
         "li",
@@ -91,7 +61,7 @@ const Nav = () =>
       )
     )
   );
- 
+};
 const headContainer = document.getElementById("header");
 const header = ReactDOM.createRoot(headContainer);
 header.render(React.createElement(Nav));

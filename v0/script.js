@@ -1,8 +1,7 @@
-const jsIcon = document.querySelector('.js');
-const cssIcon = document.querySelector('.css');
+const jsIcon = document.querySelector(".js");
+const cssIcon = document.querySelector(".css");
 
-
-window.addEventListener('mousemove', (e) => {
+window.addEventListener("mousemove", (e) => {
   const iconRect = jsIcon.getBoundingClientRect();
   const iconCenterX = iconRect.left + iconRect.width / 2;
   const iconCenterY = iconRect.top + iconRect.height / 2;
@@ -16,52 +15,49 @@ window.addEventListener('mousemove', (e) => {
   const cssY = (e.clientY - iconCenterX) / 10;
 
   cssIcon.style.transform = `rotateX(${cssY}deg) rotateY(${cssX}deg)`;
-
 });
 
-
-const scrollToExperienceButton = document.querySelector(".scroll-to-experience");
+const scrollToExperienceButton = document.querySelector(
+  ".scroll-to-experience"
+);
 
 scrollToExperienceButton.addEventListener("click", function (event) {
   event.preventDefault();
-
 
   var experienceSection = document.querySelector(".experience-container");
   var offsetTop = experienceSection.offsetTop;
 
   window.scrollTo({
     top: offsetTop,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
-
 
 const scrollToProjectsButton = document.querySelector(".scroll-to-projects");
 
 scrollToProjectsButton.addEventListener("click", function (event) {
   event.preventDefault();
 
-
   var projectsSection = document.querySelector(".projects-container");
   var offsetTop = projectsSection.offsetTop;
 
   window.scrollTo({
     top: offsetTop,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 const homeButton = document.querySelector(".logo");
 
 homeButton.addEventListener("click", function (event) {
   event.preventDefault();
+  window.location.href = "/";
+  // var projectsSection = document.querySelector(".hero-section");
+  // var offsetTop = projectsSection.offsetTop;
 
-  var projectsSection = document.querySelector(".hero-section");
-  var offsetTop = projectsSection.offsetTop;
-
-  window.scrollTo({
-    top: offsetTop,
-    behavior: "smooth"
-  });
+  // window.scrollTo({
+  //   top: offsetTop,
+  //   behavior: "smooth"
+  // });
 });
 const scrollToAboutButton = document.querySelector(".scroll-to-about");
 
@@ -73,7 +69,6 @@ scrollToAboutButton.addEventListener("click", function (event) {
 
   window.scrollTo({
     top: offsetTop,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
-
