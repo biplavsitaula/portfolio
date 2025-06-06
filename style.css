@@ -30,12 +30,13 @@ body.light {
 /* Dark Theme */
 body.dark {
   --background: #121212;
+  --body-background: linear-gradient(135deg, #0d1c22, #203a43, #2c5364);
   --text-primary: #eaeaea;
   --text-secondary: #9ca3af;
   --accent: #3b82f6;
-  --card-background: #1f1f1f;
-  --border-color: #2c2c2c;
-  background-color: var(--background);
+  --card-background: #203a43;
+  --border-color: #2c5364;
+  background: var(--body-background);
 }
 
 #theme-toggle {
@@ -178,6 +179,9 @@ nav > ul {
   padding: 0.3rem;
   border-radius: 0.3rem;
 }
+.socials svg:hover{
+background-color: var(--border-color);
+}
 .hero .socials a {
   border: none;
   text-decoration: none;
@@ -218,9 +222,13 @@ nav > ul {
 }
 .skill_list * {
   border: 1px solid var(--border-color);
-  padding: 0.2rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   background-color: var(--card-background);
-  border-radius: 0.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.skill_list *:hover{
+  background-color: var(--border-color);
 }
 
 /* experience section */
