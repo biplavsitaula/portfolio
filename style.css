@@ -198,7 +198,7 @@ background-color: var(--border-color);
   fill: var(--text-secondary);
   color: var(--text-secondary);
 }
-.detail  a {
+.detail a {
   color: var(--accent);
   text-decoration: none;
   border: 1px solid var(--border-color);
@@ -207,7 +207,7 @@ background-color: var(--border-color);
   background-color: none;
   transition: 0.3s ease-in-out;
 }
-.detail  a:hover {
+.detail a:hover {
   background-color: var(--card-background);
 }
 .skills {
