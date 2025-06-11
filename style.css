@@ -59,7 +59,7 @@ body.dark {
   }
 }
 
-.website-version{
+.website-version {
   position: absolute;
   color: var(--text-primary);
   background-color: var(--card-background);
@@ -74,7 +74,6 @@ body.dark {
     top: 0;
     left: 0;
     z-index: 10;
-    
   }
 }
 
@@ -144,7 +143,6 @@ nav > ul {
   }
 }
 
-
 /*----main----*/
 
 .hero {
@@ -179,8 +177,8 @@ nav > ul {
   padding: 0.3rem;
   border-radius: 0.3rem;
 }
-.socials svg:hover{
-background-color: var(--border-color);
+.socials svg:hover {
+  background-color: var(--border-color);
 }
 .hero .socials a {
   border: none;
@@ -198,7 +196,7 @@ background-color: var(--border-color);
   fill: var(--text-secondary);
   color: var(--text-secondary);
 }
-.detail a {
+.detail > div > a {
   color: var(--accent);
   text-decoration: none;
   border: 1px solid var(--border-color);
@@ -207,7 +205,7 @@ background-color: var(--border-color);
   background-color: none;
   transition: 0.3s ease-in-out;
 }
-.detail a:hover {
+.detail > div > a:hover {
   background-color: var(--card-background);
 }
 .skills {
@@ -227,7 +225,7 @@ background-color: var(--border-color);
   border-radius: 0.6rem;
   cursor: pointer;
 }
-.skill_list *:hover{
+.skill_list *:hover {
   background-color: var(--border-color);
 }
 
@@ -346,7 +344,7 @@ background-color: var(--border-color);
 
 /* footer section */
 footer {
-  div{
+  div {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -356,7 +354,7 @@ footer {
     border-top: 1px solid var(--border-color);
     width: 100%;
 
-    button{
+    button {
       padding: 0.3rem 0.6rem;
       border-radius: 2rem;
       color: var(--text-primary);
@@ -366,15 +364,15 @@ footer {
   }
 }
 
-#about-container{
+#about-container {
   margin-inline: auto;
   max-width: 800px;
   margin-top: 5rem;
 }
-.project-card.tutorial-element{
+.project-card.tutorial-element {
   margin-inline: 1rem;
   margin-block: 1rem;
-  a{
+  a {
     text-decoration: none;
     color: var(--text-primary);
     display: flex;
@@ -383,14 +381,14 @@ footer {
     }
     gap: 1rem;
     font-size: 2rem;
-    img{
+    img {
       border-radius: 1.2rem;
       box-shadow: 1px 1px 5px var(--text-primary);
       @media (width<595px) {
         max-width: 100%;
       }
     }
-    h3{
+    h3 {
       margin-top: 1rem;
     }
   }
